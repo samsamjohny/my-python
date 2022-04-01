@@ -1,0 +1,34 @@
+from abc import ABC,abstractmethod
+class Vehicle(ABC):
+    @abstractmethod
+    def go(self):
+        None
+
+    @abstractmethod
+    def stop(self):
+        None
+
+class Car(Vehicle):
+
+    def go(self):
+        print("This car is moving")
+
+    def stop(self):
+        print("This car is stopping")
+
+class Motorcycle(Vehicle):
+    def go(self):
+        print("This motorcycle is moving")
+
+    def stop(self):
+        print("This car is stopping")
+
+
+car = Car()
+motor = Motorcycle()
+
+car.go()
+car.stop()
+print('\n #------------------------')
+motor.go()
+motor.stop()
